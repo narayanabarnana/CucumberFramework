@@ -1,0 +1,167 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 303478854,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksOrder.StartRecording(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 14290135807,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksOrder.driverSetUp(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 5635958383,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksOrder.CRMApplicationLogin(Scenario)"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "This scenario is to create call in CRM Application",
+        "description": "",
+        "id": "this-feature-file-contains-scenarios-for-call-in-free-crm;this-scenario-is-to-create-call-in-crm-application",
+        "after": [
+          {
+            "result": {
+              "duration": 2674927202,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksOrder.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 638872414,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on CRMHomePage",
+            "match": {
+              "location": "DealMapStepDefination.user_is_on_CRMHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2575697460,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User Navigates to New Call Page",
+            "match": {
+              "location": "CallCreationStepDefinition.User_Navigates_to_New_Call_Page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16673544942,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User enters the call details",
+            "match": {
+              "location": "CallCreationStepDefinition.user_enters_the_call_details(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "CallScript",
+                  "AssignedTo",
+                  "SearchContact"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "test",
+                  "Narayana B",
+                  "Narayana"
+                ],
+                "line": 10
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 518025455,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Extract the Task id",
+            "match": {
+              "location": "CallCreationStepDefinition.extract_the_Task_id()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 402437081,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Extract the Case id",
+            "match": {
+              "location": "CallCreationStepDefinition.extract_the_Case_id()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 427845641,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Extract the Deal id",
+            "match": {
+              "location": "CallCreationStepDefinition.extract_the_Deal_id()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 161851,
+              "status": "passed"
+            },
+            "output": [
+              "Finished scenario"
+            ],
+            "line": 15,
+            "name": "Click on Submit button",
+            "match": {
+              "location": "CallCreationStepDefinition.click_on_Submit_button()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "This feature file contains scenarios for Call in Free CRM",
+    "description": "",
+    "id": "this-feature-file-contains-scenarios-for-call-in-free-crm",
+    "keyword": "Feature",
+    "uri": "C:/Users/1024812/Desktop/Selenium-Latest/CucumberFramework/src/test/resources/features/CallCreation.feature"
+  }
+]

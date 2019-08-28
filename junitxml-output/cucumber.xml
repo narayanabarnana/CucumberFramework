@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="44.141085">
+<testcase classname="This feature file contains scenarios for Call in Free CRM" name="This scenario is to create call in CRM Application" time="44.141085">
+<system-out><![CDATA[Given User is on CRMHomePage................................................passed
+When User Navigates to New Call Page........................................passed
+Then User enters the call details...........................................passed
+And Extract the Task id.....................................................passed
+And Extract the Case id.....................................................passed
+And Extract the Deal id.....................................................passed
+And Click on Submit button..................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

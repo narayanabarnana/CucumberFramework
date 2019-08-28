@@ -1,0 +1,11 @@
+Feature: This feature file contains scenarios for Call in Free CRM
+Finished scenario
+
+  Scenario: This scenario is to create call in CRM Application # C:/Users/1024812/Desktop/Selenium-Latest/CucumberFramework/src/test/resources/features/CallCreation.feature:3
+    Given User is on CRMHomePage                               # DealMapStepDefination.user_is_on_CRMHomePage()
+    When User Navigates to New Call Page                       # CallCreationStepDefinition.User_Navigates_to_New_Call_Page()
+    Then User enters the call details                          # CallCreationStepDefinition.user_enters_the_call_details(DataTable)
+    And Extract the Task id                                    # CallCreationStepDefinition.extract_the_Task_id()
+    And Extract the Case id                                    # CallCreationStepDefinition.extract_the_Case_id()
+    And Extract the Deal id                                    # CallCreationStepDefinition.extract_the_Deal_id()
+    And Click on Submit button                                 # CallCreationStepDefinition.click_on_Submit_button()

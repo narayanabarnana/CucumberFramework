@@ -91,7 +91,7 @@ public class HandlingWebTable {
 		
 		
 		
-		WebElement LayoutHeaderName=driver.findElement(By.xpath("//*[@class='pageTitle']"));
+		WebElement LayoutHeaderName=driver.findElement(By.xpath("//div[@id='SDMLAYOUT_SPEC']"));
 		
 		WebDriverWait wait=new WebDriverWait(driver,60);
 		wait.until(ExpectedConditions.visibilityOf(LayoutHeaderName));

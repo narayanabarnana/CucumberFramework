@@ -18,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 			
 
 			//features="C:\\Users\\1024812\\Downloads\\Framework-master\\src\\test\\resources\\features\\TestMultipleScenario.feature",
-			features="C:\\Users\\1024812\\Desktop\\Selenium-Latest\\CucumberFramework\\src\\test\\resources\\features\\CallCreation.feature",
+			features="C:\\Users\\1024812\\Desktop\\Selenium-Latest\\CucumberFramework\\src\\test\\resources\\features",
 //			features="C:\\Users\\1024812\\Downloads\\Framework-master\\src\\test\\resources\\features",
 
 			//features="F:\\CucumberFramework\\Framework\\src\\test\\resources\\features\\TestMultipleScenario.feature",

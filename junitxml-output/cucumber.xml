@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="44.141085">
-<testcase classname="This feature file contains scenarios for Call in Free CRM" name="This scenario is to create call in CRM Application" time="44.141085">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="148.853286">
+<testcase classname="This feature file contains scenarios for Call in Free CRM" name="This scenario is to create call in CRM Application" time="34.227612">
 <system-out><![CDATA[Given User is on CRMHomePage................................................passed
 When User Navigates to New Call Page........................................passed
 Then User enters the call details...........................................passed
@@ -7,6 +7,28 @@ And Extract the Task id.....................................................pass
 And Extract the Case id.....................................................passed
 And Extract the Deal id.....................................................passed
 And Click on Submit button..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Contact Creation in FreeCRM" name="This scenario is to create a contact in FreeCRM Application" time="26.090648">
+<system-out><![CDATA[Given User is on CRMHomePage................................................passed
+When User Navigates to New Contacts Page....................................passed
+Then User enters FirstName and LastName and Position details................passed
+Then User clicks on Save button.............................................passed
+Then Contact Created........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Deals Data creation" name="Create a new deal data creation" time="67.044661">
+<system-out><![CDATA[Given User is on CRMHomePage................................................passed
+Then User move to New Deal Page.............................................passed
+Then User enters deals details..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Deals Data creation" name="Creating a New Product using Deals" time="21.490365">
+<system-out><![CDATA[Given User is on CRMHomePage................................................passed
+When User moves to New Product Page.........................................passed
+And User enters Product details.............................................passed
+Then Clicked on Save button.................................................passed
+Then Product created Succesfully............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

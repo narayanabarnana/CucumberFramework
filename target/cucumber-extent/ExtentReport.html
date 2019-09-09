@@ -52,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Sep 2, 2019 07:07:38 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Sep 9, 2019 03:24:28 PM</span>
 				</a>
 			</li>
 			<li>
@@ -128,7 +128,7 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -143,7 +143,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -158,7 +158,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>7</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>20</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -178,12 +178,12 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>This feature file contains scenarios for Call in Free CRM</span>
-						<span class='test-time'>Sep 2, 2019 07:07:38 PM</span>
+						<span class='test-time'>Sep 9, 2019 03:24:28 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenario node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 55s+751ms</span>
+	<span class='duration right label'>0h 0m 32s+829ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">This scenario is to create call in CRM Application</span>
@@ -250,6 +250,162 @@
 </div>
 					</div>
 				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Contact Creation in FreeCRM</span>
+						<span class='test-time'>Sep 9, 2019 03:25:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='11' status='pass'>
+	<span class='duration right label'>0h 0m 24s+848ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">This scenario is to create a contact in FreeCRM Application</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='12' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given User is on CRMHomePage</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='13' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User Navigates to New Contacts Page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='14' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then User enters FirstName and LastName and Position details</span>
+				<div class='pre'><table><tr><td>FirstName</td><td>LastName</td><td>Position</td></tr><tr><td>Test123</td><td>Test456</td><td>Manager</td></tr></table></div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='15' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then User clicks on Save button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='16' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Contact Created</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>Deals Data creation</span>
+						<span class='test-time'>Sep 9, 2019 03:25:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='18' status='pass'>
+	<span class='duration right label'>0h 1m 5s+282ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Create a new deal data creation</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='19' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given User is on CRMHomePage</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='20' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then User move to New Deal Page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='21' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then User enters deals details</span>
+				<div class='pre'><table><tr><td>title</td><td>Amount</td><td>Probability</td><td>Commission</td></tr><tr><td>test deal1</td><td>1000</td><td>50</td><td>10</td></tr><tr><td>test deal2</td><td>2000</td><td>40</td><td>20</td></tr><tr><td>test deal3</td><td>3000</td><td>30</td><td>30</td></tr></table></div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='22' status='pass'>
+	<span class='duration right label'>0h 0m 20s+443ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Creating a New Product using Deals</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='23' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given User is on CRMHomePage</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='24' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User moves to New Product Page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='25' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User enters Product details</span>
+				<div class='pre'><table><tr><td>ProductName</td><td>Cost</td><td>RetailValue</td><td>WholeSalePrice</td><td>SKU</td><td>InventoryAmount</td><td>ProductDescription</td></tr><tr><td>test product1</td><td>1000</td><td>5000</td><td>1500</td><td>TestSKU</td><td>1000</td><td>TestProductDesc</td></tr></table></div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='26' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Clicked on Save button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='27' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Product created Succesfully</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -285,37 +441,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>7</div>
+					<div class='panel-lead'>20</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 2, 2019 07:07:38 PM</div>
+					<div class='panel-lead'>Sep 9, 2019 03:24:28 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 2, 2019 07:08:41 PM</div>
+			 		<div class='panel-lead'>Sep 9, 2019 03:26:57 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>63,425ms</div>
+					<div class='panel-lead'>149,389ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -373,7 +529,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
+				passParent: 3,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
@@ -381,7 +537,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 1,
+				passChild: 4,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -390,7 +546,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 7,
+				passGrandChild: 20,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

@@ -1,5 +1,7 @@
 package seleniumTests;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -74,6 +76,32 @@ public class HandlingWebTable {
 		Layout.click();
 		
 		System.out.println("Clicked on Layout");
+		
+		/*
+		 * Handling Frames: Using Index, Name or Id, or WebElement
+		 * driver.switchTo().defaultContent();
+		 * driver.switchTo().frame("appFrame"); --using name
+		 * driver.switchTo().parentFrame();  -- changes focus to the parent frame
+		 */
+		
+		WebElement framename=driver.findElement(By.xpath("//iframe[@id='appFrame']"));
+		driver.switchTo().frame(framename);
+		
+		System.out.println("Identified the frame");
+		
+		
+		
+		WebElement LayoutHeaderName=driver.findElement(By.xpath("//*[@class='pageTitle']"));
+		
+		WebDriverWait wait=new WebDriverWait(driver,60);
+		wait.until(ExpectedConditions.visibilityOf(LayoutHeaderName));
+		
+		
+		WebElement SDMLayoutSpec=driver.findElement(By.xpath("//table[@id='SDMLAYOUT_SPEC']/tbody"));
+		List<WebElement> rows=SDMLayoutSpec.findElements(By.tagName("tr"));
+		
+		System.out.println("Number of rows " + rows.size());
+		
 		//***************Logout Code*************
 //		WebElement userprofilemenu=driver.findElement(By.xpath("//img[@id='shellUsername']"));
 //		userprofilemenu.click();

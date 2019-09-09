@@ -18,7 +18,7 @@ public class HandlingWebTable {
 		System.setProperty("webdriver.chrome.driver", DataProviderFactory.getConfig().getChromePath());
 		driver=new ChromeDriver();
 		
-		driver.get("http://localhost:9001/jda/shell/home");
+		driver.get("http://md1npdtest15:4391/jda/shell/");
 		
 		WebDriverWait waitele=new WebDriverWait(driver, 60);
 		waitele.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='loginBox']//input[@name='USER_NAME']")));
@@ -35,14 +35,43 @@ public class HandlingWebTable {
 		driver.manage().window().maximize();
 		
 		
-		//clicking on S&OP
-		System.out.println("******Clicking on S&OP Menu on the left navigation******");
-		WebElement SOPMenu=driver.findElement(By.xpath("//a//span[@title='S&OP']"));
-		SOPMenu.click();
-		System.out.println("Clicked Succesfully on S&OP Menu on the left navigation");
+		//span[@class='navToggle expanded']
+		//WebElement ToggleExpand=driver.findElement(By.xpath("//span[@class='navToggle expanded']"))
+		
+		//a//span[@title='S&OP']/preceding-sibling::span
+		
+		WebElement SOPExpand=driver.findElement(By.xpath("//a//span[@title='S&OP']/preceding-sibling::span"));
+		String ExpandAttributeValue=SOPExpand.getAttribute("class");
+		System.out.println(ExpandAttributeValue);
+		
+		if(ExpandAttributeValue.contains("collapsed"))
+		{
+			WebElement SOPMenu=driver.findElement(By.xpath("//span[@title='S&OP']"));
+			SOPMenu.click();
+		}
+		else {
+			
+			System.out.println("The S&OP Menu is already Expanded");
+		}
 		
 		
-		//waitele.until(ExpectedConditions.presenceOfElementLocated(By.xpath("")));
+		WebElement BPExpand=driver.findElement(By.xpath("//a//span[@title='Business Process']/preceding-sibling::span"));
+		String BPExpandAttributeValue=BPExpand.getAttribute("class");
+		System.out.println(BPExpandAttributeValue);
+		
+		if(BPExpandAttributeValue.contains("collapsed"))
+		{
+			WebElement SOPMenu=driver.findElement(By.xpath("//span[@title='Business Process']"));
+			SOPMenu.click();
+		}
+		else {
+			
+			System.out.println("The S&OP Menu is already Expanded");
+		}
+		
+		
+		WebElement Layout=driver.findElement(By.xpath("//*[@title='Layout']"));
+		Layout.click();
 		//***************Logout Code*************
 //		WebElement userprofilemenu=driver.findElement(By.xpath("//img[@id='shellUsername']"));
 //		userprofilemenu.click();

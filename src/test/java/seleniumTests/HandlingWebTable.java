@@ -72,6 +72,8 @@ public class HandlingWebTable {
 		
 		WebElement Layout=driver.findElement(By.xpath("//*[@title='Layout']"));
 		Layout.click();
+		
+		System.out.println("Clicked on Layout");
 		//***************Logout Code*************
 //		WebElement userprofilemenu=driver.findElement(By.xpath("//img[@id='shellUsername']"));
 //		userprofilemenu.click();

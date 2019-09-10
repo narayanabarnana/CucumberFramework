@@ -90,7 +90,7 @@ public class HandlingWebTable {
 		System.out.println("Identified the frame");
 		
 		
-		
+		/*
 		WebElement LayoutHeaderName=driver.findElement(By.xpath("//div[@id='SDMLAYOUT_SPEC']"));
 		
 		WebDriverWait wait=new WebDriverWait(driver,60);
@@ -101,6 +101,8 @@ public class HandlingWebTable {
 		List<WebElement> rows=SDMLayoutSpec.findElements(By.tagName("tr"));
 		
 		System.out.println("Number of rows " + rows.size());
+		
+		*/
 		
 		//***************Logout Code*************
 //		WebElement userprofilemenu=driver.findElement(By.xpath("//img[@id='shellUsername']"));

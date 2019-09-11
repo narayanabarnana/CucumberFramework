@@ -1,8 +1,10 @@
 package seleniumTests;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,14 +15,14 @@ import factory.DataProviderFactory;
 
 public class HandlingWebTable {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException{
 		
 		
 		WebDriver driver;
 		System.setProperty("webdriver.chrome.driver", DataProviderFactory.getConfig().getChromePath());
 		driver=new ChromeDriver();
 		
-		driver.get("http://md1npdtest15:4391/jda/shell/");
+		driver.get("http://localhost:9001/jda/shell/home");
 		
 		WebDriverWait waitele=new WebDriverWait(driver, 60);
 		waitele.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='loginBox']//input[@name='USER_NAME']")));
@@ -83,26 +85,26 @@ public class HandlingWebTable {
 		 * driver.switchTo().frame("appFrame"); --using name
 		 * driver.switchTo().parentFrame();  -- changes focus to the parent frame
 		 */
-		
-		WebElement framename=driver.findElement(By.xpath("//iframe[@id='appFrame']"));
-		driver.switchTo().frame(framename);
-		
+		WebElement framename=driver.findElement(By.xpath("//iframe[@id='appFrame']")); ////
+		 driver.switchTo().frame(framename);
+		 		
 		System.out.println("Identified the frame");
 		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		/*
-		WebElement LayoutHeaderName=driver.findElement(By.xpath("//div[@id='SDMLAYOUT_SPEC']"));
+		driver.findElement(By.xpath("//a[@id='ADD']")).click();
+		//WebElement LayoutHeaderName=driver.findElement(By.xpath("//div[@id='SDMLAYOUT_SPEC']"));
 		
-		WebDriverWait wait=new WebDriverWait(driver,60);
-		wait.until(ExpectedConditions.visibilityOf(LayoutHeaderName));
+		//WebDriverWait wait=new WebDriverWait(driver,60);
+		//wait.until(ExpectedConditions.visibilityOf(LayoutHeaderName));
 		
 		
-		WebElement SDMLayoutSpec=driver.findElement(By.xpath("//table[@id='SDMLAYOUT_SPEC']/tbody"));
-		List<WebElement> rows=SDMLayoutSpec.findElements(By.tagName("tr"));
+//		WebElement SDMLayoutSpec=driver.findElement(By.xpath("//table[@id='SDMLAYOUT_SPEC']/tbody"));
+//		List<WebElement> rows=SDMLayoutSpec.findElements(By.tagName("tr"));
+//		
+//		System.out.println("Number of rows " + rows.size());
 		
-		System.out.println("Number of rows " + rows.size());
 		
-		*/
 		
 		//***************Logout Code*************
 //		WebElement userprofilemenu=driver.findElement(By.xpath("//img[@id='shellUsername']"));

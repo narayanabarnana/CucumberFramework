@@ -35,6 +35,12 @@ Properties pro;
 		return url;
 	}
 	
+	public String getGeckoDriverPath()
+	{
+		String geckoDriverPath=pro.getProperty("GeckoDriverPath");
+		return geckoDriverPath;
+	}
+	
 	public String getChromePath()
 	{
 		String ChromePath=pro.getProperty("chromePath");

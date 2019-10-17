@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import interfaceLib.IActions;
 import utilities.CucumberBaseClass;
 
+@SuppressWarnings("unused")
 public class ActionControl extends CucumberBaseClass implements IActions{
 	
 	//WebDriver driver;

@@ -1,33 +1,29 @@
 Feature: This feature file contains scenarios for Call in Free CRM
 Finished scenario
 
-  Scenario: This scenario is to create call in CRM Application # CallCreation.feature:3
+  @SmokeTest
+  Scenario: This scenario is to create call in CRM Application # CallCreation.feature:4
     Given User is on CRMHomePage                               # DealMapStepDefination.user_is_on_CRMHomePage()
     When User Navigates to New Call Page                       # CallCreationStepDefinition.User_Navigates_to_New_Call_Page()
     Then User enters the call details                          # CallCreationStepDefinition.user_enters_the_call_details(DataTable)
     And Extract the Task id                                    # CallCreationStepDefinition.extract_the_Task_id()
     And Extract the Case id                                    # CallCreationStepDefinition.extract_the_Case_id()
     And Extract the Deal id                                    # CallCreationStepDefinition.extract_the_Deal_id()
-    And Click on Submit button                                 # CallCreationStepDefinition.click_on_Submit_button()
-Feature: Contact Creation in FreeCRM
-Finished scenario
+      junit.framework.AssertionFailedError: expected:<true> but was:<false>
+      	at junit.framework.Assert.fail(Assert.java:57)
+      	at junit.framework.Assert.failNotEquals(Assert.java:329)
+      	at junit.framework.Assert.assertEquals(Assert.java:78)
+      	at junit.framework.Assert.assertEquals(Assert.java:174)
+      	at junit.framework.Assert.assertEquals(Assert.java:181)
+      	at stepDefinations.CallCreationStepDefinition.extract_the_Deal_id(CallCreationStepDefinition.java:202)
+      	at ✽.And Extract the Deal id(CallCreation.feature:15)
 
-  Scenario: This scenario is to create a contact in FreeCRM Application # ContactCreationFeature.feature:3
-    Given User is on CRMHomePage                                        # DealMapStepDefination.user_is_on_CRMHomePage()
-    When User Navigates to New Contacts Page                            # ContactCreationStepDefination.user_Navigates_to_New_Contacts_Page()
-    Then User enters FirstName and LastName and Position details        # ContactCreationStepDefination.user_enters_FirstName_and_LastName_and_Position_details(DataTable)
-    Then User clicks on Save button                                     # ContactCreationStepDefination.user_clicks_on_Save_button()
-    Then Contact Created                                                # ContactCreationStepDefination.contact_Created()
+    And Click on Submit button                                 # CallCreationStepDefinition.click_on_Submit_button()
 Feature: Deals Data creation
 Finished scenario
 
-  Scenario: Create a new deal data creation # DealsMap.feature:3
-    Given User is on CRMHomePage            # DealMapStepDefination.user_is_on_CRMHomePage()
-    Then User move to New Deal Page         # DealMapStepDefination.user_move_to_New_Deal_Page()
-    Then User enters deals details          # DealMapStepDefination.user_enters_deals_details(DataTable)
-Finished scenario
-
-  Scenario: Creating a New Product using Deals # DealsMap.feature:14
+  @SmokeTest
+  Scenario: Creating a New Product using Deals # DealsMap.feature:15
     Given User is on CRMHomePage               # DealMapStepDefination.user_is_on_CRMHomePage()
     When User moves to New Product Page        # ProductCreationStepDefination.user_moves_to_New_Product_Page()
     And User enters Product details            # ProductCreationStepDefination.user_enters_Product_details(DataTable)

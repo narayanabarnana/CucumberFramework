@@ -10,6 +10,7 @@ ImplementedClassLib\WindowHandleControls.class
 interfaceLib\IWindowHandle.class
 factory\DataProviderFactory.class
 utilities\CucumberBaseClass.class
+utilities\Highlight.class
 utilities\TestContext.class
 utilities\WaitUtils.class
 ImplementedClassLib\AlertControl.class

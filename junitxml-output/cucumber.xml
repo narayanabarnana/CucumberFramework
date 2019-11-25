@@ -1,34 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="148.853286">
-<testcase classname="This feature file contains scenarios for Call in Free CRM" name="This scenario is to create call in CRM Application" time="34.227612">
-<system-out><![CDATA[Given User is on CRMHomePage................................................passed
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="66.525639">
+    <testcase classname="This feature file contains scenarios for Call in Free CRM" name="This scenario is to create call in CRM Application" time="41.009156">
+        <failure message="junit.framework.AssertionFailedError: expected:&lt;true&gt; but was:&lt;false&gt;&#13;&#10;&#9;at junit.framework.Assert.fail(Assert.java:57)&#13;&#10;&#9;at junit.framework.Assert.failNotEquals(Assert.java:329)&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:78)&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:174)&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:181)&#13;&#10;&#9;at stepDefinations.CallCreationStepDefinition.extract_the_Deal_id(CallCreationStepDefinition.java:202)&#13;&#10;&#9;at ✽.And Extract the Deal id(CallCreation.feature:15)&#13;&#10;">
+            <![CDATA[Given User is on CRMHomePage................................................passed
 When User Navigates to New Call Page........................................passed
 Then User enters the call details...........................................passed
 And Extract the Task id.....................................................passed
 And Extract the Case id.....................................................passed
-And Extract the Deal id.....................................................passed
-And Click on Submit button..................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Contact Creation in FreeCRM" name="This scenario is to create a contact in FreeCRM Application" time="26.090648">
-<system-out><![CDATA[Given User is on CRMHomePage................................................passed
-When User Navigates to New Contacts Page....................................passed
-Then User enters FirstName and LastName and Position details................passed
-Then User clicks on Save button.............................................passed
-Then Contact Created........................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Deals Data creation" name="Create a new deal data creation" time="67.044661">
-<system-out><![CDATA[Given User is on CRMHomePage................................................passed
-Then User move to New Deal Page.............................................passed
-Then User enters deals details..............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Deals Data creation" name="Creating a New Product using Deals" time="21.490365">
-<system-out><![CDATA[Given User is on CRMHomePage................................................passed
+And Extract the Deal id.....................................................failed
+And Click on Submit button..................................................skipped
+
+StackTrace:
+junit.framework.AssertionFailedError: expected:<true> but was:<false>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:174)
+	at junit.framework.Assert.assertEquals(Assert.java:181)
+	at stepDefinations.CallCreationStepDefinition.extract_the_Deal_id(CallCreationStepDefinition.java:202)
+	at ✽.And Extract the Deal id(CallCreation.feature:15)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Deals Data creation" name="Creating a New Product using Deals" time="25.516483">
+        <system-out>
+            <![CDATA[Given User is on CRMHomePage................................................passed
 When User moves to New Product Page.........................................passed
 And User enters Product details.............................................passed
 Then Clicked on Save button.................................................passed
 Then Product created Succesfully............................................passed
-]]></system-out>
-</testcase>
+]]>
+        </system-out>
+    </testcase>
 </testsuite>

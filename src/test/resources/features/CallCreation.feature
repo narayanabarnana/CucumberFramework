@@ -1,5 +1,6 @@
 Feature: This feature file contains scenarios for Call in Free CRM
 
+@SmokeTest
 Scenario: This scenario is to create call in CRM Application
 
 Given User is on CRMHomePage

@@ -20,6 +20,7 @@ import ImplementedClassLib.WebElementControl;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import junit.framework.Assert;
 import pages.CallPage;
 import pages.CasesPage;
 //import pages.CasesPage;
@@ -184,6 +185,7 @@ public class CallCreationStepDefinition extends CucumberBaseClass{
 	   
 	}
 
+	@SuppressWarnings("deprecation")
 	@Then("^Extract the Deal id$")
 	public void extract_the_Deal_id() throws Throwable {
 		
@@ -196,6 +198,8 @@ public class CallCreationStepDefinition extends CucumberBaseClass{
 		
 		String[] splitDealId=DealId.split(":");
 		System.out.println("***********The Deal Id from Call Creation is " + splitDealId[1].trim());
+		
+		Assert.assertEquals(true, false);
 
 	}
 

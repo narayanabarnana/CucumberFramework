@@ -7,37 +7,43 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 201809632,
+  "duration": 329608637,
   "status": "passed"
 });
 formatter.before({
-  "duration": 10658765451,
+  "duration": 11541689234,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4824394776,
+  "duration": 6088158901,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 3,
+  "line": 4,
   "name": "This scenario is to create call in CRM Application",
   "description": "",
   "id": "this-feature-file-contains-scenarios-for-call-in-free-crm;this-scenario-is-to-create-call-in-crm-application",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 3,
+      "name": "@SmokeTest"
+    }
+  ]
 });
 formatter.step({
-  "line": 5,
+  "line": 6,
   "name": "User is on CRMHomePage",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
+  "line": 7,
   "name": "User Navigates to New Call Page",
   "keyword": "When "
 });
 formatter.step({
-  "line": 7,
+  "line": 8,
   "name": "User enters the call details",
   "rows": [
     {
@@ -46,7 +52,7 @@ formatter.step({
         "AssignedTo",
         "SearchContact"
       ],
-      "line": 9
+      "line": 10
     },
     {
       "cells": [
@@ -54,28 +60,28 @@ formatter.step({
         "Narayana B",
         "Narayana"
       ],
-      "line": 10
+      "line": 11
     }
   ],
   "keyword": "Then "
 });
 formatter.step({
-  "line": 12,
+  "line": 13,
   "name": "Extract the Task id",
   "keyword": "And "
 });
 formatter.step({
-  "line": 13,
+  "line": 14,
   "name": "Extract the Case id",
   "keyword": "And "
 });
 formatter.step({
-  "line": 14,
+  "line": 15,
   "name": "Extract the Deal id",
   "keyword": "And "
 });
 formatter.step({
-  "line": 15,
+  "line": 16,
   "name": "Click on Submit button",
   "keyword": "And "
 });
@@ -83,165 +89,54 @@ formatter.match({
   "location": "DealMapStepDefination.user_is_on_CRMHomePage()"
 });
 formatter.result({
-  "duration": 179058759,
+  "duration": 326499258,
   "status": "passed"
 });
 formatter.match({
   "location": "CallCreationStepDefinition.User_Navigates_to_New_Call_Page()"
 });
 formatter.result({
-  "duration": 1790810086,
+  "duration": 2711910988,
   "status": "passed"
 });
 formatter.match({
   "location": "CallCreationStepDefinition.user_enters_the_call_details(DataTable)"
 });
 formatter.result({
-  "duration": 14384974621,
+  "duration": 15867193759,
   "status": "passed"
 });
 formatter.match({
   "location": "CallCreationStepDefinition.extract_the_Task_id()"
 });
 formatter.result({
-  "duration": 243467146,
+  "duration": 364438760,
   "status": "passed"
 });
 formatter.match({
   "location": "CallCreationStepDefinition.extract_the_Case_id()"
 });
 formatter.result({
-  "duration": 217172115,
+  "duration": 340497811,
   "status": "passed"
 });
 formatter.match({
   "location": "CallCreationStepDefinition.extract_the_Deal_id()"
 });
 formatter.result({
-  "duration": 208947667,
-  "status": "passed"
+  "duration": 292124011,
+  "error_message": "junit.framework.AssertionFailedError: expected:\u003ctrue\u003e but was:\u003cfalse\u003e\r\n\tat junit.framework.Assert.fail(Assert.java:57)\r\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:174)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:181)\r\n\tat stepDefinations.CallCreationStepDefinition.extract_the_Deal_id(CallCreationStepDefinition.java:202)\r\n\tat ✽.And Extract the Deal id(CallCreation.feature:15)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "CallCreationStepDefinition.click_on_Submit_button()"
 });
 formatter.result({
-  "duration": 128352,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.write("Finished scenario");
 formatter.after({
-  "duration": 1518083807,
-  "status": "passed"
-});
-formatter.uri("ContactCreationFeature.feature");
-formatter.feature({
-  "line": 1,
-  "name": "Contact Creation in FreeCRM",
-  "description": "",
-  "id": "contact-creation-in-freecrm",
-  "keyword": "Feature"
-});
-formatter.before({
-  "duration": 14654426,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 9290824719,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 5206925405,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 3,
-  "name": "This scenario is to create a contact in FreeCRM Application",
-  "description": "",
-  "id": "contact-creation-in-freecrm;this-scenario-is-to-create-a-contact-in-freecrm-application",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 5,
-  "name": "User is on CRMHomePage",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "User Navigates to New Contacts Page",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "User enters FirstName and LastName and Position details",
-  "rows": [
-    {
-      "cells": [
-        "FirstName",
-        "LastName",
-        "Position"
-      ],
-      "line": 9
-    },
-    {
-      "cells": [
-        "Test123",
-        "Test456",
-        "Manager"
-      ],
-      "line": 10
-    }
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 12,
-  "name": "User clicks on Save button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 13,
-  "name": "Contact Created",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "DealMapStepDefination.user_is_on_CRMHomePage()"
-});
-formatter.result({
-  "duration": 1332542,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ContactCreationStepDefination.user_Navigates_to_New_Contacts_Page()"
-});
-formatter.result({
-  "duration": 2048625938,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ContactCreationStepDefination.user_enters_FirstName_and_LastName_and_Position_details(DataTable)"
-});
-formatter.result({
-  "duration": 5502990019,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ContactCreationStepDefination.user_clicks_on_Save_button()"
-});
-formatter.result({
-  "duration": 2758863655,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ContactCreationStepDefination.contact_Created()"
-});
-formatter.result({
-  "duration": 113895,
-  "status": "passed"
-});
-formatter.write("Finished scenario");
-formatter.after({
-  "duration": 1266317458,
+  "duration": 3147034348,
   "status": "passed"
 });
 formatter.uri("DealsMap.feature");
@@ -253,136 +148,43 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 20528679,
+  "duration": 63340287,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9370365330,
+  "duration": 8184455150,
   "status": "passed"
 });
 formatter.before({
-  "duration": 5132229053,
+  "duration": 6396810788,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 3,
-  "name": "Create a new deal data creation",
-  "description": "",
-  "id": "deals-data-creation;create-a-new-deal-data-creation",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 5,
-  "name": "User is on CRMHomePage",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "User move to New Deal Page",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 7,
-  "name": "User enters deals details",
-  "rows": [
-    {
-      "cells": [
-        "title",
-        "Amount",
-        "Probability",
-        "Commission"
-      ],
-      "line": 9
-    },
-    {
-      "cells": [
-        "test deal1",
-        "1000",
-        "50",
-        "10"
-      ],
-      "line": 10
-    },
-    {
-      "cells": [
-        "test deal2",
-        "2000",
-        "40",
-        "20"
-      ],
-      "line": 11
-    },
-    {
-      "cells": [
-        "test deal3",
-        "3000",
-        "30",
-        "30"
-      ],
-      "line": 12
-    }
-  ],
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "DealMapStepDefination.user_is_on_CRMHomePage()"
-});
-formatter.result({
-  "duration": 967935,
-  "status": "passed"
-});
-formatter.match({
-  "location": "DealMapStepDefination.user_move_to_New_Deal_Page()"
-});
-formatter.result({
-  "duration": 1794472017,
-  "status": "passed"
-});
-formatter.match({
-  "location": "DealMapStepDefination.user_enters_deals_details(DataTable)"
-});
-formatter.result({
-  "duration": 48951053180,
-  "status": "passed"
-});
-formatter.write("Finished scenario");
-formatter.after({
-  "duration": 1775044914,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 8524526,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 9483703259,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 5667125304,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 14,
+  "line": 15,
   "name": "Creating a New Product using Deals",
   "description": "",
   "id": "deals-data-creation;creating-a-new-product-using-deals",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 14,
+      "name": "@SmokeTest"
+    }
+  ]
 });
 formatter.step({
-  "line": 16,
+  "line": 17,
   "name": "User is on CRMHomePage",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 17,
+  "line": 18,
   "name": "User moves to New Product Page",
   "keyword": "When "
 });
 formatter.step({
-  "line": 18,
+  "line": 19,
   "name": "User enters Product details",
   "rows": [
     {
@@ -395,7 +197,7 @@ formatter.step({
         "InventoryAmount",
         "ProductDescription"
       ],
-      "line": 19
+      "line": 20
     },
     {
       "cells": [
@@ -407,18 +209,18 @@ formatter.step({
         "1000",
         "TestProductDesc"
       ],
-      "line": 20
+      "line": 21
     }
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 21,
+  "line": 22,
   "name": "Clicked on Save button",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 22,
+  "line": 23,
   "name": "Product created Succesfully",
   "keyword": "Then "
 });
@@ -426,40 +228,40 @@ formatter.match({
   "location": "DealMapStepDefination.user_is_on_CRMHomePage()"
 });
 formatter.result({
-  "duration": 1158348,
+  "duration": 1394602,
   "status": "passed"
 });
 formatter.match({
   "location": "ProductCreationStepDefination.user_moves_to_New_Product_Page()"
 });
 formatter.result({
-  "duration": 1343649978,
+  "duration": 1848055457,
   "status": "passed"
 });
 formatter.match({
   "location": "ProductCreationStepDefination.user_enters_Product_details(DataTable)"
 });
 formatter.result({
-  "duration": 2337907957,
+  "duration": 4688367439,
   "status": "passed"
 });
 formatter.match({
   "location": "ProductCreationStepDefination.clicked_on_Save_button()"
 });
 formatter.result({
-  "duration": 1582715048,
+  "duration": 1717980942,
   "status": "passed"
 });
 formatter.match({
   "location": "ProductCreationStepDefination.product_created_Succesfully()"
 });
 formatter.result({
-  "duration": 146689,
+  "duration": 104022,
   "status": "passed"
 });
 formatter.write("Finished scenario");
 formatter.after({
-  "duration": 1065433447,
+  "duration": 2615974056,
   "status": "passed"
 });
 });

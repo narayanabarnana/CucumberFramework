@@ -27,14 +27,15 @@ import cucumber.api.junit.Cucumber;
 			dryRun=false,
 			monochrome=true,
 			strict=true,
-			//tags={"@SmokeTest"},  //if we want to execute Smoke test only
+			tags={"@SmokeTest"},  //if we want to execute Smoke test only
 			//tags={"@SmokeTest , @RegressionTest"}, //OR operator :if we want to execute either SmokeTest or Regression test then we use this i.e. Comma(,) separated
 			//tags={"@SanityTest" , "@RegressionTest"}, //And Operator : Executes all tests tagged as @SanityTest AND @RegressionTest
 			//tags={"~@SanityTest" , "@RegressionTest"}, //Ignore specific test cases we use ~ special character. in this example we are ignoring  SanityTest
 			format={"pretty","html:test-output","json:json-output/cucumber.json","junit:junitxml-output/cucumber.xml"},
 			plugin={"pretty:STDOUT","html:target/cucumber-extent",
 
-					"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:C:\\Users\\1024812\\Desktop\\Selenium-Latest\\CucumberFramework\\target\\cucumber-extent\\ExtentReport.html"
+					"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:C:\\Users\\1024812\\Desktop\\Selenium-Latest\\CucumberFramework\\target\\cucumber-extent\\ExtentReport.html",
+					"rerun:target/rerun.txt"
 
 					//"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:F:\\CucumberFramework\\Framework\\target\\cucumber-extent\\ExtentReport.html"
 					}

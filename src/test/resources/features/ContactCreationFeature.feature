@@ -1,5 +1,6 @@
 Feature: Contact Creation in FreeCRM
 
+@FunctionalTests
 Scenario: This scenario is to create a contact in FreeCRM Application
 
 Given User is on CRMHomePage

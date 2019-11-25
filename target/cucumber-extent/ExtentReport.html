@@ -38,7 +38,9 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1)" view='testrunner-logs-view'><i class='material-icons'>note</i></a></li>
 		</ul>
 
@@ -52,7 +54,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Sep 9, 2019 03:24:28 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Oct 30, 2019 09:33:01 PM</span>
 				</a>
 			</li>
 			<li>
@@ -78,6 +80,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -85,6 +89,16 @@
 			<!-- test toggle -->
 
 			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@SmokeTest</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
 			<!-- category toggle -->
 
 			<!-- clear filters -->
@@ -128,10 +142,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -143,10 +157,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -158,10 +172,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>20</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='83.333%'><span class='strong'>10</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='8.333%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='8.333%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -175,15 +189,18 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>This feature file contains scenarios for Call in Free CRM</span>
-						<span class='test-time'>Sep 9, 2019 03:24:28 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Oct 30, 2019 09:33:01 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 32s+829ms</span>
+<div class='scenario node' test-id='2' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@SmokeTest</span>
+	</div>
+	<span class='duration right label'>0h 0m 38s+49ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">This scenario is to create call in CRM Application</span>
@@ -230,20 +247,31 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='8' class='node and pass' status='pass'>
+		<li test-id='8' class='node and fail' status='fail'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And Extract the Deal id</span>
-				<div class='pre'>passed</div>
+				<div class='pre'><textarea>junit.framework.AssertionFailedError: expected:<true> but was:<false>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:174)
+	at junit.framework.Assert.assertEquals(Assert.java:181)
+	at stepDefinations.CallCreationStepDefinition.extract_the_Deal_id(CallCreationStepDefinition.java:202)
+	at ?.And Extract the Deal id(CallCreation.feature:15)
+</textarea></div>
 			
 		</li>
-		<li test-id='9' class='node and pass' status='pass'>
+		<li test-id='9' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And Click on Submit button</span>
-				<div class='pre'>passed</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\1024812\Desktop\Selenium-Latest\CucumberFramework\target\screenshots\This_scenario_is_to_create_call_in_CRM_Application.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>skipped</div>
 			
 		</li>
 	</ul>
@@ -254,16 +282,19 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='10'>
 					<div class='test-heading'>
-						<span class='test-name'>Contact Creation in FreeCRM</span>
-						<span class='test-time'>Sep 9, 2019 03:25:03 PM</span>
+						<span class='test-name'>Deals Data creation</span>
+						<span class='test-time'>Oct 30, 2019 09:33:42 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenario node' test-id='11' status='pass'>
-	<span class='duration right label'>0h 0m 24s+848ms</span>
+	<div class='category-list'>
+		<span class='category label white-text'>@SmokeTest</span>
+	</div>
+	<span class='duration right label'>0h 0m 22s+920ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
-		<span class="desc-text">This scenario is to create a contact in FreeCRM Application</span>
+		<span class="desc-text">Creating a New Product using Deals</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='12' class='node given pass' status='pass'>
@@ -278,106 +309,11 @@
 			
 			<b>When</b>
 			
-			<span class="bdd-step-name">When User Navigates to New Contacts Page</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='14' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then User enters FirstName and LastName and Position details</span>
-				<div class='pre'><table><tr><td>FirstName</td><td>LastName</td><td>Position</td></tr><tr><td>Test123</td><td>Test456</td><td>Manager</td></tr></table></div>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='15' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then User clicks on Save button</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='16' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then Contact Created</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='17'>
-					<div class='test-heading'>
-						<span class='test-name'>Deals Data creation</span>
-						<span class='test-time'>Sep 9, 2019 03:25:29 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='scenario node' test-id='18' status='pass'>
-	<span class='duration right label'>0h 1m 5s+282ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">Create a new deal data creation</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='19' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given User is on CRMHomePage</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='20' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then User move to New Deal Page</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='21' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then User enters deals details</span>
-				<div class='pre'><table><tr><td>title</td><td>Amount</td><td>Probability</td><td>Commission</td></tr><tr><td>test deal1</td><td>1000</td><td>50</td><td>10</td></tr><tr><td>test deal2</td><td>2000</td><td>40</td><td>20</td></tr><tr><td>test deal3</td><td>3000</td><td>30</td><td>30</td></tr></table></div>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='22' status='pass'>
-	<span class='duration right label'>0h 0m 20s+443ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">Creating a New Product using Deals</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='23' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given User is on CRMHomePage</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='24' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
 			<span class="bdd-step-name">When User moves to New Product Page</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='25' class='node and pass' status='pass'>
+		<li test-id='14' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
@@ -386,7 +322,7 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='26' class='node then pass' status='pass'>
+		<li test-id='15' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
@@ -394,7 +330,7 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='27' class='node then pass' status='pass'>
+		<li test-id='16' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
@@ -431,7 +367,152 @@
 
 </div>
 <!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@SmokeTest</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Oct 30, 2019 09:33:01 PM</td>
+										<td class='linked' test-id='2'>This feature file contains scenarios for Call in Free CRM.This scenario is to create call in CRM Application</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Oct 30, 2019 09:33:42 PM</td>
+										<td class='linked' test-id='11'>Deals Data creation.Creating a New Product using Deals</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
 <!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>junit.framework.AssertionFailedError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Oct 30, 2019 09:33:39 PM</td>
+                                                        <td class='linked' test-id='8'>This feature file contains scenarios for Call in Free CRM.This scenario is to create call in CRM Application.And Extract the Deal id</td>
+                                                        <td><pre><textarea>junit.framework.AssertionFailedError: expected:<true> but was:<false>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:174)
+	at junit.framework.Assert.assertEquals(Assert.java:181)
+	at stepDefinations.CallCreationStepDefinition.extract_the_Deal_id(CallCreationStepDefinition.java:202)
+	at ?.And Extract the Deal id(CallCreation.feature:15)
+</textarea></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -441,37 +522,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>20</div>
+					<div class='panel-lead'>12</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 9, 2019 03:24:28 PM</div>
+					<div class='panel-lead'>Oct 30, 2019 09:33:01 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 9, 2019 03:26:57 PM</div>
+			 		<div class='panel-lead'>Oct 30, 2019 09:34:08 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>149,389ms</div>
+					<div class='panel-lead'>67,117ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -510,6 +591,30 @@
 					</table>
 				</div>
 			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@SmokeTest</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -529,31 +634,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 3,
-				failParent: 0,
+				passParent: 1,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 4,
-				failChild: 0,
+				passChild: 1,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 1,
 				
-				passGrandChild: 20,
-				failGrandChild: 0,
+				passGrandChild: 10,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 1,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 2,
 			};
 		</script>
 		

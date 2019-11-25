@@ -1,5 +1,6 @@
 Feature: Deals Data creation 
 
+@RegressionTest
 Scenario: Create a new deal data creation 
 
 	Given User is on CRMHomePage 
@@ -10,7 +11,7 @@ Scenario: Create a new deal data creation
 		| test deal1 | 1000   | 50          | 10         |
 		| test deal2 | 2000   | 40          | 20         |
 		| test deal3 | 3000   | 30          | 30         |
-
+@SmokeTest
 Scenario: Creating a New Product using Deals
 	
 	Given User is on CRMHomePage

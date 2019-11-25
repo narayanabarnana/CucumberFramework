@@ -1,5 +1,7 @@
 package stepDefinations;
 
+import java.io.File;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -8,9 +10,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import com.google.common.io.Files;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import com.vimalselvam.cucumber.listener.Reporter;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -112,11 +116,27 @@ public class HooksOrder extends CucumberBaseClass{
 		scenario.write("Finished scenario");
 		if (scenario.isFailed())
 				{
+					String screenshotName = scenario.getName().replaceAll(" ", "_");
 					log.info(scenario.getName() + " is Failed ");
-					final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-					scenario.embed(screenshot, "image/png");
+					File sourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+					File destinationPath = new File(System.getProperty("user.dir") + "/target/screenshots/" + screenshotName + ".png");
+					Files.copy(sourcePath, destinationPath);
+					Reporter.addScreenCaptureFromPath(destinationPath.toString());
+					//scenario.embed(screenshot, "image/png");
 					//scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),"image/png");
 				}
+			/*
+		else {
+			
+			String screenshotName = scenario.getName().replaceAll(" ", "_");
+			log.info(scenario.getName() + " is Failed ");
+			File sourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			File destinationPath = new File(System.getProperty("user.dir") + "/target/screenshots/" + screenshotName + ".png");
+			Files.copy(sourcePath, destinationPath);
+			Reporter.addScreenCaptureFromPath(destinationPath.toString());
+			
+		}
+		*/
 		System.out.println("Test Environment Destroyed ");
 		System.out.println("----------------------------------------------------------------------");
 		driver.close();

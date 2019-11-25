@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: testRunner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 2.126 s - in testRunner.TestRunner
+Tests run: 14, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 68.461 s <<< FAILURE! - in testRunner.TestRunner
+And Extract the Deal id(Scenario: This scenario is to create call in CRM Application)  Time elapsed: 0.032 s  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<true> but was:<false>
+
+Scenario: This scenario is to create call in CRM Application  Time elapsed: 0.032 s  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<true> but was:<false>
+

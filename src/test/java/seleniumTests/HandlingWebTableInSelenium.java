@@ -30,7 +30,7 @@ public class HandlingWebTableInSelenium {
 		
 		int colNum = driver.findElements(By.xpath("//table[@id='BooksAuthorsTable']/tbody/tr[1]/th")).size();
 		
-		System.out.println("Number fo columns in a webtable " + colNum);
+		System.out.println("Number of columns in a webtable " + colNum);
 		
 		//Get column header values from first row
 		List<WebElement> colHeader = rowVals.get(0).findElements(By.tagName("th"));

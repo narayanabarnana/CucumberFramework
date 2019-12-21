@@ -29,22 +29,37 @@ public class HandlingMultipleWindows {
 		//		System.setProperty("webdriver.gecko.driver","C:\\Users\\1024812\\Desktop\\Selenium Data\\geckodriver-v0.24.0-win64\\geckodriver.exe");
 		//		driver = new FirefoxDriver();
 
-		driver.get("https://chandanachaitanya.github.io/selenium-practice-site/?languages=Java&enterText=");
+		//driver.get("https://chandanachaitanya.github.io/selenium-practice-site/?languages=Java&enterText=");
 
-		driver.manage().window().maximize();
-		
-		String parentWindowHandle=driver.getWindowHandle();
-		System.out.println("Current window is " + parentWindowHandle);
-		
-		WebElement newWindowBtn = driver.findElement(By.id("win1"));
-        newWindowBtn.click();
+//		driver.manage().window().maximize();
+//		
+//		String parentWindowHandle=driver.getWindowHandle();
+//		System.out.println("Current window is " + parentWindowHandle);
+//		
+//		WebElement newWindowBtn = driver.findElement(By.id("win1"));
+//        newWindowBtn.click();
+//        
+//        Set<String> winHandles=driver.getWindowHandles();
+//        for(String wintitle:winHandles) {
+//        	System.out.println(wintitle);
+//        	if(!wintitle.equals(parentWindowHandle)) {
+//        		driver.switchTo().window(wintitle);
+//        	}
+//        }
         
-        Set<String> winHandles=driver.getWindowHandles();
-        for(String wintitle:winHandles) {
-        	System.out.println(wintitle);
-        	if(!wintitle.equals(parentWindowHandle)) {
-        		driver.switchTo().window(wintitle);
-        	}
+        
+        driver.get("https://www.naukri.com/");
+        driver.manage().window().maximize();
+        
+        String naukriparentWindowHandle=driver.getWindowHandle();
+        System.out.println("Parent window of Naukri is " + naukriparentWindowHandle);
+        
+        Set<String> naukriwinhandle=driver.getWindowHandles();
+        int childwindowsize=naukriwinhandle.size();
+        
+        for(String naukrichildwintitle: naukriwinhandle)
+        {
+        	System.out.println(naukrichildwintitle);
         }
 
 	}

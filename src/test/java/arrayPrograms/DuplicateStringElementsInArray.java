@@ -19,7 +19,6 @@ public class DuplicateStringElementsInArray {
 
 	public static void main(String[] args) {
 
-
 		String[] strArray= {"java","JSP","java"};
 		
 		HashSet<String> set=new HashSet<String>();

@@ -10,10 +10,13 @@ public class ReverseAnArray {
 		// creating a new Array
 		int[] b = new int[n];
 		int j = n;
+		System.out.println(j);
 
 		for (int i = 0; i < n; i++) {
+			
 			b[j - 1] = array[i];
 			j = j - 1;
+			
 
 		}
 
@@ -21,6 +24,8 @@ public class ReverseAnArray {
 		for (int k = 0; k < n; k++) {
 			System.out.println(b[k]);
 		}
+		
+		;
 
 	}
 
